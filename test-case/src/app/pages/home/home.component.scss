@@ -7,15 +7,20 @@ header {
     display: flex;
     justify-content: space-between;
     nav {
-        a { 
-            background-color: blue;
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        a.login { 
+            border: 1px solid #5b94ed;
+            background-color: #5b94ed;
             border-radius: 1.5rem;
             color: white;
             padding: .75rem 2.5rem;
             text-decoration: none;
-            :hover{
-                background-color: cyan;
-                color: white;
+            &:hover{
+                background-color: white;
+                color: #5b94ed;
             }
         }
     }

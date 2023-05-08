@@ -2,12 +2,13 @@
     <header>
         <h1>Cinta Coding</h1>
         <nav>
-            <a href="/login">Login</a>
+            <a class="login" *ngIf="!authPayload.isLogin" href="/login">Login</a>
+            <p *ngIf="authPayload.isLogin">Welcome <a href="/logout">{{authPayload.name}}</a></p>
         </nav>
     </header>
     <main>
         <div class="image-container">
-            <img src="path/to/image.jpg" alt="Image">
+            <img src="https://rovitpm.com/content/images/size/w2000/2022/01/git-workflow.png" alt="Image">
         </div>
     </main>
 </body>
