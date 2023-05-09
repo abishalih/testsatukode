@@ -1,14 +1,16 @@
 <body>
     <header>
         <h1>Cinta Coding</h1>
+        <app-tabs [authPayload]="authPayload" *ngIf="authPayload.isLogin"></app-tabs>
         <nav>
             <a class="login" *ngIf="!authPayload.isLogin" href="/login">Login</a>
             <p *ngIf="authPayload.isLogin">Welcome <a href="/logout">{{authPayload.name}}</a></p>
         </nav>
     </header>
     <main>
-        <div class="image-container">
+        <div class="image-container" *ngIf="!authPayload.isLogin">
             <img src="https://rovitpm.com/content/images/size/w2000/2022/01/git-workflow.png" alt="Image">
         </div>
+        <app-post [authPayload]="authPayload" *ngIf="authPayload.isLogin"></app-post>
     </main>
 </body>

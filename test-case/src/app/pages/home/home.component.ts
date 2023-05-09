@@ -28,7 +28,5 @@ export class HomeComponent implements OnInit {
       password,
       username,
     }
-    console.log({authPayload:this.authPayload});
-    
   }
 }
