@@ -4,7 +4,7 @@
         <app-tabs [authPayload]="authPayload" *ngIf="authPayload.isLogin"></app-tabs>
         <nav>
             <a class="login" *ngIf="!authPayload.isLogin" href="/login">Login</a>
-            <p *ngIf="authPayload.isLogin">Welcome <a href="/logout">{{authPayload.name}}</a></p>
+            <p *ngIf="authPayload.isLogin">Welcome <span class="username">{{authPayload.username}}</span></p>
         </nav>
     </header>
     <main>

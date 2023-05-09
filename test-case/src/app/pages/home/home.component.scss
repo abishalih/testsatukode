@@ -11,6 +11,11 @@ header {
         display: flex;
         gap: 1rem;
         justify-content: space-between;
+        font-size: 16pt;
+        font-weight: 700;
+        .username{
+            color: #5b94ed;
+        }
         a.login { 
             border: 1px solid #5b94ed;
             background-color: #5b94ed;
