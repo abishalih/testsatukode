@@ -1,6 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthServiceService } from '../../services/auth-service.service';
+import { AuthServiceService } from '../../services/auth/auth-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,8 @@ export class LoginComponent {
   onSubmit() {
     const authPayload = this.authPayload;
     this.authService.authLogin().subscribe((result: any[]) => {
-      this.result = result.filter(({username})=>username.toLowerCase() ===authPayload.username.toLowerCase() && username.toLowerCase() === authPayload.password.toLowerCase())
+      localStorage.setItem('listUser', JSON.stringify(result));
+      this.result = result.filter(({username})=>username.toLowerCase() ===authPayload.username.toLowerCase() && username.toLowerCase() === authPayload.password.toLowerCase());
     });
     if(this.result.length>0){
       const {
