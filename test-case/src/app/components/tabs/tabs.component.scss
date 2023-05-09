@@ -1,0 +1,13 @@
+ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    li{
+        border-bottom: 3px solid #111;
+        cursor: pointer;
+        padding: .35rem .75rem;
+        &:hover{
+            border-bottom: 3px solid #888;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<main>
+    <a href="/">
+        <img src="" alt="Back">
+    </a>
+    <section class="post">
+        <div class="post-user">{{ post.user }}</div>
+        <div class="post-wrapper">
+            <div class="post-title">
+                {{ post.title }}
+            </div>
+            <div class="post-actions">
+                <div class="post-comment">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5338/5338282.png" height="15px" alt=""> 
+                    <p>{{ post.comments.length }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

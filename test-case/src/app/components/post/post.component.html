@@ -1,0 +1,23 @@
+<main>
+    <input type="text" placeholder="Search" />
+    <section *ngFor="let post of pagedData" class="post">
+        <div class="post-user">{{ post.user }}</div>
+        <div class="post-wrapper">
+            <div class="post-title">
+                {{ post.title }}
+            </div>
+            <div class="post-actions">
+                <div class="post-comment">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5338/5338282.png" height="15px" alt=""> 
+                    <p>{{ post.comments.length }}</p>
+                </div>
+                <a href="detail/{{ post.id }}" class="post-detail">Details</a>
+            </div>
+        </div>
+    </section>
+    <section class="pagination">
+        <div class="pagination-prev" (click)="onPageChanged(currentPage - 1)">Prev</div>
+        <div class="pagination-page" *ngFor="let page of pages" (click)="onPageChanged(page)" [class.active]="page === currentPage">{{ page }}</div>
+        <div class="pagination-next" (click)="onPageChanged(currentPage + 1)">Next</div>
+    </section>
+</main>
